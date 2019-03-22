@@ -15,38 +15,16 @@ export default {
   effects: {
     *login({ payload }, { call, put }) {
       console.log(payload);
-      let params;
-      if(payload&&payload.type==='account') {
-        params = {
-          env: "DEV",
-          username: payload.username,
-          password: payload.password,
-          captcha: payload.captcha,               
-          codeKey: payload.codeKey,
-          loginMode: payload.loginMode,
-          appCode: "commonAdmin"
-        }
+      if(payload&&payload.username === 'admin' &&payload.password === '123456'){
+          localStorage.setItem("token",'3123333333333');
+          localStorage.setItem("user",JSON.stringify({realName:'李白'}));
+          // localStorage.setItem("permissions",JSON.stringify(response.data.permissions))
+          window.location.replace(loginRedirectUrl)
       }else{
-        params = {
-          "env": "DEV",
-          "username": payload.code,
-          "password": "commonAdmin",
-          "codeKey": "commonAdmin",
-          "loginMode": "WORK_WE_CHAT",
-          "appCode": "commonAdmin"
-        }
-      }
-      const response = yield call(requestPost, login, params);
-      console.log(response)
-      if(response.code === '1'){
-        localStorage.setItem("token",response.data.token);
-        localStorage.setItem("user",JSON.stringify(response.data.user));
-        localStorage.setItem("permissions",JSON.stringify(response.data.permissions))
-        window.location.replace(loginRedirectUrl)
-      }else{
-        message.error(response.desc);
+        message.error("用户名密码错误");
         // yield put(routerRedux.push('/user/login'));
       }
+      
     },
     *logout({ payload }, { call, put }) {
       localStorage.clear();
