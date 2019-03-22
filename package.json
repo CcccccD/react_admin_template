@@ -1,0 +1,16 @@
+{
+  "name": "cy-template-react",
+  "version": "0.0.1",
+  "scripts": {},
+  "description": "react 项目模板",
+  "repository": {
+    "type": "gitlab",
+    "url": "http://gitlab.gs.9188.com/caiyi.html5.public/cli/cy-template/cy-template-react"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cy-scene-react": "1.0.0",
+    "rollbar": "^2.5.0",
+    "url-polyfill": "^1.1.0"
+  }
+}
