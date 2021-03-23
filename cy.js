@@ -1,6 +1,6 @@
 
 /**
- * 文档: http://cli.caiyi.com/cy/index.html
+ * 文档: 
  */
 
 export default {
@@ -30,7 +30,7 @@ export default {
   hash: true,
   dll: {
     switch: true,
-    dllName: 'caiyi',
+    dllName: 'admindll',
     pkg: ['react', 'react-dom', 'react-router-dom', 'react-loadable']
   },
   mock: true

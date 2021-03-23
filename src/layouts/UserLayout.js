@@ -40,18 +40,6 @@ export default class BasicLayout extends Component {
               href: 'http://ant.design',
               blankTarget: true,
             },
-            {
-              key: 'gitlab',
-              title: (<span><Icon type="github" /><span>gitlab</span></span>),
-              href: 'http://gitlab.gs.9188.com/caiyi.html5.public/template-antd-pro',
-              blankTarget: true,
-            },
-            {
-              key: '有鱼金融',
-              title: '有鱼金融',
-              href: 'https://www.youyuwo.com',
-              blankTarget: true,
-            },
           ]}
           copyright={
             <Fragment>
